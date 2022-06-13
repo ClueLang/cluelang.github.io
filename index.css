@@ -9,10 +9,12 @@ textarea {
 	background: #1E1E1E;
 }
 
-.textareas {
+.compiler {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
+	flex-wrap: wrap;
+	row-gap: 30px;
 }
 
 .compile-button {
@@ -20,41 +22,16 @@ textarea {
 	padding: 15px 45px;
 	border-radius: 12px;
 	background-image: linear-gradient(to right, #399AFF 0%, #0009B5 51%, #399AFF 100%);
-	background-clip: unset;
-	box-shadow: 0 0 20px #eee;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	box-shadow: 0 0 20px #EEE;
 	background-size: 200% auto;
 	transition: 0.5s;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 
 .compile-button:hover {
 	background-position: right center;
 }
-/*
-        
-        .btn-grad {
-            background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
-            margin: 10px;
-            padding: 15px 45px;
-            text-align: center;
-            text-transform: uppercase;
-            transition: 0.5s;
-            background-size: 200% auto;
-            color: white;            
-            box-shadow: 0 0 20px #eee;
-            border-radius: 10px;
-            display: block;
-        }
-
-        .btn-grad:hover {
-            background-position: right center;
-            color: #fff;
-            text-decoration: none;
-        }
-        
-*/
 
 .title {
 	font-size: 250%;
