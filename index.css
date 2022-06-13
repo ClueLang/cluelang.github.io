@@ -1,3 +1,18 @@
 html {
-    font-family: Arial, Helvetica, sans-serif;
+	font-family: Verdana, sans-serif;
+	background: -webkit-linear-gradient(#FFFFFF, #399AFF, #0009B5);
+}
+
+textarea {
+	resize: none;
+	color: #BBBBBB;
+	background: #1E1E1E;
+}
+
+.title {
+	font-size: 250%;
+	background: -webkit-linear-gradient(#399AFF, #0009B5);
+	background-clip: unset;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
