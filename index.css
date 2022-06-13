@@ -9,10 +9,21 @@ textarea {
 	background: #1E1E1E;
 }
 
+.textareas {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
 .title {
 	font-size: 250%;
 	background: -webkit-linear-gradient(#399AFF, #0009B5);
 	background-clip: unset;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.logo {
+	width: 128px;
+	height: 128px;
 }
