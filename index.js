@@ -1,10 +1,13 @@
-import * as wasm from "./clue_bg.wasm";
-export * from "./clue_bg.js";
+import init from "./clue.js";
+import {CompileCode} from "./clue.js";
 
 const input = document.getElementById("input")
 const output = document.getElementById("output")
 const button = document.getElementById("compile-button")
 
-button.onclick = () => {
-	output.value = CompileCode(input.value, "(Clue Online)", 0)
-}
+init().then(() => {
+    button.onclick = () => {
+        output.value = CompileCode(input.value, "(Clue Online)", 0)
+    }
+    button.innerHTML = "Compile"
+})
