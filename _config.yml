@@ -1,3 +1,11 @@
 theme: jekyll-theme-minimal
 title: Clue Online
 description: Try out Clue before downloading it.
+destination: ./build
+exclude:
+  - .git
+  - .github
+  - .vscode
+  - vendor
+  - build-wasm.sh
+  - Clue-wasm

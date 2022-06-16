@@ -1,13 +1,15 @@
-import init from "./clue.js";
-import {CompileCode} from "./clue.js";
+import init, { CompileCode } from "./pkg/clue.js";
 
-const input = document.getElementById("input")
-const output = document.getElementById("output")
-const button = document.getElementById("compile-button")
+const input = document.getElementById("input");
+const output = document.getElementById("output");
+const button = document.getElementById("compile-button");
 
-init().then(() => {
-    button.onclick = () => {
-        output.value = CompileCode(input.value, "(Clue Online)", 0)
-    }
-    button.innerHTML = "Compile"
-})
+(async () => {
+  await init();
+  button.addEventListener("click", () => {
+    const code = input.value;
+    const compiled = CompileCode(code, "(Clue Online)", 0);
+    output.textContent = compiled;
+  });
+  button.textContent = "Compile";
+})();
