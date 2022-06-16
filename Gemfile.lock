@@ -70,11 +70,11 @@ GEM
 
 PLATFORMS
   universal-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   http_parser.rb (~> 0.6.0)
   jekyll (~> 4.2.2)
-  jekyll-feed (~> 0.12)
   jekyll-theme-minimal (~> 0.2.0)
   minima (~> 2.5)
   tzinfo (~> 1.2)
