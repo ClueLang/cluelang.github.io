@@ -4,6 +4,6 @@ const output = document.getElementById("output")
 document.getElementById("compile-button").onclick = () => {
     WebAssembly.instantiateStreaming(fetch('test.wasm'), {})
         .then(results => {
-            results.greet()
+            console.log(results)
         });
 }
