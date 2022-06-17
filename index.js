@@ -12,7 +12,7 @@ const button = document.getElementById("compile-button");
 			compiled = CompileCode(input.value, "(Clue Online)", 0);
 		} catch (error) {
 			console.log(error)
-			output.style.color = "#EE5D43";
+			//output.style.color = "#EE5D43";
 			output.textContent = error + "Error!";
 		} finally {
 			output.style.color = "#BBBBBB";
