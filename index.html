@@ -1,26 +1,37 @@
 <html lang="en">
-	<head>
-		<link rel="stylesheet" href="index.css">
-	</head>
-	<body>
-		<h1 align="center" class="title">
-			Clue Online
-		</h1>
-		<img src="clue.png" alt="Clue logo" class="logo">
-		<p align="center">
-			<b>
-				Try out Clue here, for more information about Clue itself, check
-				<a href="https://github.com/ClueLang/Clue">
-					the repository
-				</a>
-				.
-			</b>
-		</p>
-		<div class="compiler">
-			<textarea id="input" rows="16" cols="80" name="input" maxlength="2000">//Insert your Clue code here.</textarea>
-			<textarea id="output" rows="16" cols="80" name="output" maxlength="4000" readonly="true">--The Lua compiled code will appear here.</textarea>
-			<button id="compile-button" type="button" class="compile-button">Loading...</button>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="module" src="index.js"></script>
+</head>
+
+<body>
+	<h1 align="center" class="title">
+		Clue Online
+	</h1>
+	<img src="clue.png" alt="Clue logo" class="logo">
+	<p align="center">
+		<b>
+			Try out Clue here, for more information about Clue itself, check
+			<a href="https://github.com/ClueLang/Clue">
+				the repository
+			</a>
+			.
+		</b>
+	</p>
+	<div class="compiler">
+		<div class="editor-wrapper">
+			<textarea class="editor" name="input" name="input" maxlength="2000">//Insert your Clue code here.</textarea>
+			<textarea class="editor" id="output" name="output" maxlength="4000"
+				readonly="true">--The Lua compiled code will appear here.</textarea>
 		</div>
-		<script type="module" src="index.js"></script>
-	</body>
+
+		<button id="compile-button" type="button" class="compile-button">Loading...</button>
+	</div>
+</body>
+
 </html>
