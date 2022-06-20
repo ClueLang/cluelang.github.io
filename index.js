@@ -14,7 +14,7 @@ inputEditor.session.setMode("ace/mode/clue");
 /**@type {Editor} */
 const outputEditor = ace.edit("output");
 outputEditor.setTheme("ace/theme/one_dark");
-outputEditor.session.setMode("ace/mode/clue");
+outputEditor.session.setMode("ace/mode/lua");
 outputEditor.setReadOnly(true);
 outputEditor.setOptions({
   readOnly: true,
