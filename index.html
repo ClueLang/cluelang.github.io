@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="style.css">
-	<script type="module" src="index.js"></script>
+	<script type="module" src="index.js" defer></script>
+	<script src="ace/src/ace.js"></script>
 </head>
 
 <body>
@@ -25,10 +26,8 @@
 	</p>
 	<div class="compiler">
 		<div class="editor-wrapper">
-			<textarea class="editor" id="input" name="input" name="input"
-				maxlength="2000">//Insert your Clue code here.</textarea>
-			<textarea class="editor" id="output" name="output" maxlength="4000"
-				readonly="true">--The Lua compiled code will appear here.</textarea>
+			<div id="input" class="editor" id="input"></div>
+			<div id="output" class="editor" id="output"></div>
 		</div>
 
 		<button id="compile-button" type="button" class="compile-button">Loading...</button>
