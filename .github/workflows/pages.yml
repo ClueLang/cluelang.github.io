@@ -11,6 +11,7 @@ jobs:
         run: ./build.sh
       - name: Deploy to GitHub Pages
         run: |
+          ls
           URL=`git remote get-url origin` 
           rm -rf .git
           git init .
