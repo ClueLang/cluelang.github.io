@@ -17,3 +17,5 @@ jobs:
           enable_jekyll: true
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          exclude_assets: ".github,Clue-wasm/**/*,build.sh,.vscode"
+          allow_empty_commit: true

@@ -5,3 +5,4 @@ cargo install wasm-pack
 wasm-pack build --target web
 rm -rf ../pkg
 mv ./pkg/ ../
+ls
