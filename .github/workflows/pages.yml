@@ -11,12 +11,13 @@ jobs:
         run: ./build.sh
       - name: Deploy to GitHub Pages
         run: |
-          ls
+          URL=`git remote get-url origin` 
+          rm -rf .git
+          git checkout -b gh-pages
           git status
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit --allow-empty -am "Deploy: $GITHUB_SHA"
-          git checkout -b gh-pages
-          git merge --squash main
+          git remote add origin "$URL"
           git push -f origin gh-pages
