@@ -6,4 +6,4 @@ wasm-pack build --target web
 rm -rf ../pkg
 mv ./pkg/ ../
 cd ..
-ls
+ls pkg
