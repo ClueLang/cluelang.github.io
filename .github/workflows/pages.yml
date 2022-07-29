@@ -10,12 +10,7 @@ jobs:
       - name: "Build clue-wasm"
         run: ./build.sh
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-          enable_jekyll: true
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
-          exclude_assets: ".github,Clue-wasm/**/*,build.sh,.vscode"
-          allow_empty_commit: true
+        run: |
+          git commit -am "Deploy: $GITHUB_SHA"
+          git merge --squash main gh-pages
+          git push origin gh-pages
