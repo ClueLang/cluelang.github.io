@@ -11,6 +11,8 @@ jobs:
         run: ./build.sh
       - name: Deploy to GitHub Pages
         run: |
+          git config --global user.email "github-actions[bot]"
+          git config --global user.name "github-actions[bot]@users.noreply.github.com"
           git commit -am "Deploy: $GITHUB_SHA"
           git merge --squash main gh-pages
           git push origin gh-pages
