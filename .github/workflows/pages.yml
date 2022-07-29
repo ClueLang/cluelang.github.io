@@ -10,10 +10,8 @@ jobs:
       - name: "Build clue-wasm"
         run: ./build.sh
       - name: Deploy to GitHub Pages
-        run: |
-          URL=`git remote get-url origin`
-          echo "$URL" 
-          rm -rf .git
+        run: | 
+          rm -rf .git .gitignore
           git init .
           ls
           git checkout -b gh-pages
@@ -21,5 +19,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit --allow-empty -am "Deploy: $GITHUB_SHA"
-          git remote add origin "$URL"
+          git remote add origin "https://$TOKEN@github.com$GITHUB_REPOSITORY"
           git push -f origin gh-pages
+        env:
+          TOKEN: {{ secrets.GITHUB_TOKEN }}
