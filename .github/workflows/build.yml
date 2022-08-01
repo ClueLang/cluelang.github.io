@@ -1,0 +1,10 @@
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache build
+        uses: Swatinem/rust-cache@v1
+      - run: rm -rf .gitignore
+      - name: "Build clue-wasm"
+        run: ./build.sh
