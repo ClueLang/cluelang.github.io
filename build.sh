@@ -1,5 +1,5 @@
 git submodule init
-git submodule update
+git submodule update --remote --merge
 cd Clue-wasm
 cargo install wasm-pack
 wasm-pack build --target web
