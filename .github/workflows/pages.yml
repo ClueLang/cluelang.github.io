@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Cache build
-        uses: Swatinem/rust-cache@v1
+        uses: Swatinem/rust-cache@v2
       - run: rm -rf .gitignore
       - name: "Build clue-wasm"
         run: ./build-wasm.sh
