@@ -1,3 +1,6 @@
 [submodule "Clue-wasm"]
 	path = Clue-wasm
 	url = https://github.com/ClueLang/Clue-wasm
+[submodule "ace-src"]
+	path = ace-src
+	url = https://github.com/ajaxorg/ace

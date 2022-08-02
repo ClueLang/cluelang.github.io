@@ -23,7 +23,9 @@ jobs:
         uses: Swatinem/rust-cache@v1
       - run: rm -rf .gitignore
       - name: "Build clue-wasm"
-        run: ./build.sh
+        run: ./build-wasm.sh
+      - name: "Build ace"
+        run: ./build-ace.sh
       - name: "Upload pages artifact"
         uses: actions/upload-pages-artifact@v1
         with:
