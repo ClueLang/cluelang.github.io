@@ -1,3 +1,4 @@
 pkg/
 ace/
 .dccache
+.DS_Store

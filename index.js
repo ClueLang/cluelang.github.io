@@ -1,4 +1,4 @@
-import init, { CompileCode } from "./pkg/clue.js";
+import init, { compile_code } from "./pkg/clue.js";
 
 const input = document.getElementById("input");
 const output = document.getElementById("output");
@@ -27,7 +27,7 @@ outputEditor.renderer.$cursorLayer.element.style.display = "none";
   button.addEventListener("click", () => {
     let compiled;
     try {
-      compiled = CompileCode(inputEditor.getValue(), "(Clue Online)", 0);
+      compiled = compile_code(inputEditor.getValue());
       output.style.color = "#BBBBBB";
       outputEditor.setValue(compiled, 1);
       outputEditor.setValue;
