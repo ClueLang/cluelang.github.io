@@ -16,11 +16,16 @@ body {
 }
 
 .editor {
-  height: 15rem;
+  height: 100%;
   width: 100%;
   resize: none;
   color: #bbbbbb;
   background: #1e1e1e;
+}
+
+.editor-wrapper {
+  height: 15rem;
+  width: 100%;
 }
 
 .compiler {
@@ -33,7 +38,7 @@ body {
   padding: 0.5em;
 }
 
-.editor-wrapper {
+.wrapper {
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -81,4 +86,8 @@ body {
 .logo {
   width: 5rem;
   height: 5rem;
+}
+
+.version {
+  color: hsl(0, 0%, 10%);
 }

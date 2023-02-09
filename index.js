@@ -1,8 +1,9 @@
-import init, { compile_code } from "./pkg/clue.js";
+import init, { compile_code, version } from "./pkg/clue.js";
 
 const input = document.getElementById("input");
 const output = document.getElementById("output");
 const button = document.getElementById("compile-button");
+const versionText = document.getElementById("version");
 
 /**@typedef {import('./ace/src/ace.js').Ace.Document} Editor */
 
@@ -37,4 +38,5 @@ outputEditor.renderer.$cursorLayer.element.style.display = "none";
     }
   });
   button.textContent = "Compile";
+  versionText.textContent = `Version: ${version()}`;
 })();
