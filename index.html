@@ -25,15 +25,18 @@
 		</b>
 	</p>
 	<div class="compiler">
-		<div class="wrapper">
-			<div class="editor-wrapper">
-				<div id="input" class="editor">// Insert your Clue code here.</div>
-				<span id="version" class="version">Version: </span>
-			</div>
-			<div class="editor-wrapper">
-				<div id="output" class="editor">-- The Lua compiled code will appear here.</div>
+		<div class="wrapper flex-col">
+			<div class="wrapper">
+				<div class="editor-wrapper">
+					<div id="input" class="editor">// Insert your Clue code here.</div>
+				</div>
+				<div class="editor-wrapper">
+					<div id="output" class="editor">-- The Lua compiled code will appear here.</div>
+				</div>
 			</div>
 
+
+			<span id="version" class="version">Version: </span>
 		</div>
 
 		<button id="compile-button" type="button" class="compile-button">Loading...</button>

@@ -5,6 +5,7 @@ html {
 
 body {
   font-family: Verdana, sans-serif;
+  font-size: clamp(14px, 1.5vw, 16px);
   background: linear-gradient(#ffffff, #399aff, #0009b5);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -24,8 +25,10 @@ body {
 }
 
 .editor-wrapper {
-  height: 15rem;
+  font-size: 1rem;
+  height: 20em;
   width: 100%;
+  flex-direction: row;
 }
 
 .compiler {
@@ -48,8 +51,12 @@ body {
   height: 100%;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 @media screen and (max-width: 800px) {
-  .editor-wrapper {
+  .wrapper {
     flex-direction: column;
   }
 }

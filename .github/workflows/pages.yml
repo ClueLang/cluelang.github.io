@@ -27,7 +27,7 @@ jobs:
       - name: Build ace
         run: ./build-ace.sh
       - name: "Clean files not needed in the deployment"
-        run: rm -rf ace-src Clue-wasm .gitmodules *.sh jsconfig.json
+        run: rm -rf ace-src .gitmodules *.sh jsconfig.json
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
