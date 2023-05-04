@@ -22,13 +22,13 @@ jobs:
       - name: Cache build
         uses: Swatinem/rust-cache@v2
       - run: rm -rf .gitignore
-      - name: "Build clue-wasm"
-        run: ./build-wasm.sh
-      - name: "Build ace"
+      - name: Get clue-wasm
+        run: ./get-wasm.sh
+      - name: Build ace
         run: ./build-ace.sh
       - name: "Clean files not needed in the deployment"
         run: rm -rf ace-src Clue-wasm .gitmodules *.sh jsconfig.json
-      - name: "Upload pages artifact"
+      - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./

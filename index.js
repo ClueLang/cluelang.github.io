@@ -1,4 +1,4 @@
-import init, { compile_code, version } from "./pkg/clue.js";
+import init, { Clue, getVersion } from "./pkg/clue_wasm.js";
 
 const input = document.getElementById("input");
 const output = document.getElementById("output");
@@ -20,15 +20,16 @@ outputEditor.setReadOnly(true);
 outputEditor.setOptions({
   readOnly: true,
   highlightActiveLine: false,
-  highlightGutterLine: false
+  highlightGutterLine: false,
 });
 outputEditor.renderer.$cursorLayer.element.style.display = "none";
 (async () => {
   await init();
+  const clue = new Clue();
   button.addEventListener("click", () => {
     let compiled;
     try {
-      compiled = compile_code(inputEditor.getValue());
+      compiled = clue.compileCode(inputEditor.getValue());
       output.style.color = "#BBBBBB";
       outputEditor.setValue(compiled, 1);
       outputEditor.setValue;
@@ -38,5 +39,5 @@ outputEditor.renderer.$cursorLayer.element.style.display = "none";
     }
   });
   button.textContent = "Compile";
-  versionText.textContent = `Version: ${version()}`;
+  versionText.textContent = `Version: ${getVersion()}`;
 })();
