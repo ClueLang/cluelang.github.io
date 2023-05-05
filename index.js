@@ -22,7 +22,11 @@ outputEditor.setOptions({
   highlightActiveLine: false,
   highlightGutterLine: false,
 });
+
 outputEditor.renderer.$cursorLayer.element.style.display = "none";
+inputEditor.setShowPrintMargin(false);
+outputEditor.setShowPrintMargin(false);
+
 (async () => {
   await init();
   const clue = new Clue();
