@@ -4,6 +4,9 @@
         "module": "commonjs",
         "types": [
             "ace/src/ace.d.ts",
-        ]
-    }
+        ],
+    },
+    "exclude": [
+        "ace/src",
+    ]
 }

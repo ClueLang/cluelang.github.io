@@ -36,7 +36,6 @@ outputEditor.setShowPrintMargin(false);
       compiled = clue.compileCode(inputEditor.getValue());
       output.style.color = "#BBBBBB";
       outputEditor.setValue(compiled, 1);
-      outputEditor.setValue;
     } catch (error) {
       output.style.color = "#EE5D43";
       outputEditor.setValue(error, 1);
